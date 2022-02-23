@@ -66,7 +66,7 @@ function showPerson(person){
 //Show next person
 
 nextBtn.addEventListener('click', function(){
-  if(currentItem == reviews.length){
+  if(currentItem == 4){
     currentItem = 0;
   }
   currentItem++;
@@ -84,6 +84,6 @@ prevBtn.addEventListener('click', function(){
 //show random person
 
 randomBtn.addEventListener('click', function(){
-  currentItem = Math.floor(Math.random()*reviews.length);
+  const currentItem = Math.floor(Math.random()*reviews.length);
   showPerson(currentItem);
 });
