@@ -15,10 +15,16 @@
 // })
 
 const btns = document.querySelectorAll(".question-btn");
+const questionText = document.querySelectorAll(".question-text");
 
 btns.forEach(function(btn){
     btn.addEventListener("click", function (e) {
-        const question = e.currentTarget.parentElement.parentElement
-        question.classList.toggle('show-text');  
+        // const question = e.currentTarget.parentElement.parentElement
+        // question.classList.toggle('show-text'); 
+        // questionText.classList.add("question-textt") 
+        questionText.forEach(function(quest){
+            const 
+            quest.classList.add("question-textt");
+        })
     });
 });
