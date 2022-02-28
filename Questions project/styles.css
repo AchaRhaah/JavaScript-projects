@@ -234,7 +234,7 @@ Questions
 .question-text {
   display: none;
 }
-.question-textt {
+.show-text .question-text {
   display: block;
 }
 .minus-icon {

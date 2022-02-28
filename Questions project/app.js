@@ -1,30 +1,32 @@
 //using selectors inside the element
 // traversing the dom
 
-// MY TRY
 
-// const plusBtn = document.querySelector(".plus-icon");
-// const minusBtn = document.querySelector(".minus-icon");
-// const questionsText = document.querySelector(".question");
+// Treversing the DOM
 
-// plusBtn.addEventListener("click", function(){
-//     questionsText.classList.toggle("show-text");
-// })
-// minusBtn.addEventListener("click", function(){
-//     questionsText.classList.toggle("show-text");
-// })
+// const btns = document.querySelectorAll(".question-btn");
+// btns.forEach(function(btn){
+//     btn.addEventListener("click", function (e) {
+//         const question = e.currentTarget.parentElement.parentElement
+//         question.classList.toggle('show-text'); 
+//     });
+// });
 
-const btns = document.querySelectorAll(".question-btn");
-const questionText = document.querySelectorAll(".question-text");
 
-btns.forEach(function(btn){
-    btn.addEventListener("click", function (e) {
-        // const question = e.currentTarget.parentElement.parentElement
-        // question.classList.toggle('show-text'); 
-        // questionText.classList.add("question-textt") 
-        questionText.forEach(function(quest){
-            const 
-            quest.classList.add("question-textt");
+
+const questions = document.querySelectorAll('.question');
+questions.forEach(function (question) {
+    // console.log(question);
+    const btn = question.querySelector('.question-btn');
+    // console.log(btn);
+    btn.addEventListener('click', function (){
+        questions.forEach(function(item){
+            if(item !== question){
+                item.classList.remove("show-text");
+            }
         })
-    });
-});
+        question.classList.toggle("show-text")
+    })
+})
+
+
