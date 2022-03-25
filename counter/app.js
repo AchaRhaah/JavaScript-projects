@@ -1,4 +1,4 @@
-let count = 0;
+ let count = 0;
 // select buttons and value
 const btns = document.querySelectorAll(".btn");
 const value = document.querySelector("#value");
